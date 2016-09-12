@@ -52,6 +52,16 @@
 					`  </div>
 				</div>
 				{% endif %}
+				{% if page.screenshots %}
+				<div class="photos info-panel page-box">
+					<h3>SCREENSHOTS</h3>
+					  <div class="photo-container">
+						  {% for pic in page.screenshots %}
+						  <img class="photo" src="{{ pic.url }}" alt="{{ pic.captain }}">
+						  {% endfor %}
+					`  </div>
+				</div>
+				{% endif %}
 				{% if page.media %}
 				<div class="media info-panel page-box">
 					<h3>IN THE MEDIA</h3>
