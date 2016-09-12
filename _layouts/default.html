@@ -22,15 +22,7 @@
   <div class="hamburger">
     <div></div>
   </div>
-  {% if page.category =="competitions" %}
-	{% include menu-mobile-competitions.html %}
-  {% elsif page.category =="projects" %}
-	{% include menu-mobile-projects.html %}
-  {% elsif page.category =="esports" %}
-	{% include menu-mobile-esports.html %}
-  {% else %}
-	{% include menu-mobile.html %}
-  {% endif %}
+  {% include menu-mobile.html %}
   <main id="main">
 	<div class="page-main">
 		<div class="page-title page-box">

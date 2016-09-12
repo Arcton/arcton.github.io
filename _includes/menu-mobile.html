@@ -7,12 +7,34 @@
 		</li>
 		<li class="mobile-menu_layer1">
 		  <a href="#"><i class="fa fa-folder-open"></i> Projects</a>
+		  {% if page.category =="projects" %}
+			<ul class="submenu">
+				<li class="mobile-menu_layer2"><a href="#0">&nbsp;<i class="fa fa-caret-right"></i> Locatio</a></li>
+				<li class="mobile-menu_layer2"><a href="#0">&nbsp;<i class="fa fa-caret-right"></i> NautDrafter</a></li>
+				<li class="mobile-menu_layer2"><a href="#0">&nbsp;<i class="fa fa-caret-right"></i> Red Peak-ify</a></li>
+		    </ul>  
+		  {% endif %}  
 		</li>
 		<li class="mobile-menu_layer1">
 		  <a href="#"><i class="fa fa-trophy"></i> Competitions</a> 
+		  {% if page.category =="competitions" %}
+			<ul class="submenu">
+				<li class="mobile-menu_layer2"><a href="#0">&nbsp;<i class="fa fa-caret-right"></i> GovHack NZ 2016</a></li>
+				<li class="mobile-menu_layer2"><a href="#0">&nbsp;<i class="fa fa-caret-right"></i> NZ Cyber Security Challenge 2016</a></li>
+				<li class="mobile-menu_layer2"><a href="#0">&nbsp;<i class="fa fa-caret-right"></i> GovHack NZ 2015</a></li>
+				<li class="mobile-menu_layer2"><a href="#0">&nbsp;<i class="fa fa-caret-right"></i> NZ Programming Contest 2015</a></li>
+		    </ul> 
+		  {% endif %} 
 		</li>
 		<li class="mobile-menu_layer1">
 		  <a href="#"><i class="fa fa-gamepad"></i> eSports</a>
+		  {% if page.category =="esports" %}
+		  <ul class="submenu">
+			<li class="mobile-menu_layer2"><a href="#0">&nbsp;<i class="fa fa-caret-right"></i> Counter-Strike: Global Offensive</a></li>
+			<li class="mobile-menu_layer2"><a href="#0">&nbsp;<i class="fa fa-caret-right"></i> Awesomenauts</a></li>
+			<li class="mobile-menu_layer2"><a href="#0">&nbsp;<i class="fa fa-caret-right"></i> Stepmania</a></li>
+		  </ul>
+		  {% endif %}  
 		</li>
         </ul>
       </div>
