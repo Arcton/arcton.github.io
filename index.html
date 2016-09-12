@@ -1,25 +1,26 @@
 ---
-layout: default
-page_title: Locatio
-short_title: Locatio
-participants: Grady Hooker, Theo Newton, Jeremy Symon and Nathaniel Watson
-category: competitions
-photos:
-- url: /assets/nzcsc-16/1-thumb.jpg
-  captain: Arcton working during Round Two
-- url: /assets/nzcsc-16/2-thumb.jpg
-  captain: Arcton accepting their prizes
-- url: /assets/nzcsc-16/3-thumb.jpg
-  captain: Arcton working during Round One
-- url: /assets/nzcsc-16/4-thumb.jpg
-  captain: The finalists for Round Two
-projectlinks:
-- logo: /assets/logo-github.png
-  url: https://github.com/Arcton/locatio-extension
-  name: GitHub
-media:
-- logo: /assets/logo-stuff.png
-  url: http://www.stuff.co.nz/technology/digital-living/82219940/Cracking-the-system-for-the-right-reasons
-  name: Stuff.co.nz
+permalink: /404.html
 ---
-Proper Page Content
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
+    <title>{{ site.title | escape }} - 404 Error</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <script src="/js/splash.js"></script>
+  </head>
+
+  <body class="splash-screen">
+    <div class="splash-screen__shadow">
+    </div>
+    <canvas id="splashCanvas" class="splash-canvas" width="1500px" height="800px"></canvas>
+  </body>
+</html>
