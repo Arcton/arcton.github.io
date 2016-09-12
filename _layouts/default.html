@@ -1,0 +1,82 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="http://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+	<title>Arcton - {{ page.short_title }}</title>
+</head>
+<body>
+
+<header id="nav_bar">
+{% include menu.html %}
+</header>
+
+<div class="under-header">
+
+</div>
+
+<div class="outer-menu">
+  <input class="checkbox-toggle" type="checkbox">
+  <div class="hamburger">
+    <div></div>
+  </div>
+  {% if page.media =="competitions" %}
+	{% include menu-mobile-competitions %}
+  {% if page.media =="projects" %}
+	{% include menu-mobile-projects %}
+  {% if page.media =="esports" %}
+	{% include menu-mobile-esports %}
+  {% else %}
+	{% include menu-mobile %}
+  {% endif %}
+  <main id="main">
+	<div class="page-main">
+		<div class="page-title page-box">
+			<h1>{{ page.page_title }}</h1>
+			<h2>{{ page.participants }}</h2>
+		</div>
+		<div class="page-section">
+			<div class="page-content page-box">
+				{{ content }}
+			</div>
+			<div class="page-side">
+				{% if page.projectlinks %}
+				<div class="page-links info-panel page-box">
+					<h3>PROJECT LINKS</h3>
+					{% for link in page.projectlinks %}
+					<a href="{{ link.url }}"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
+					{% endfor %}
+				</div>
+				{% endif %}
+				{% if page.photos %}
+				<div class="photos info-panel page-box">
+					<h3>EVENT PHOTOS</h3>
+					  <div class="photo-container">
+						  {% for pic in page.photos %}
+						  <img class="photo" src="{{ pic.url }}" alt="{{ pic.captain }}">
+						  {% endfor %}
+					`  </div>
+				</div>
+				{% endif %}
+				{% if page.media %}
+				<div class="media info-panel page-box">
+					<h3>IN THE MEDIA</h3>
+					{% for link in page.media %}
+					<a href="{{ link.url }}"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
+					{% endfor %}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</main>
+</div>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
