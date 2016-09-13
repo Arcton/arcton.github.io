@@ -10,7 +10,7 @@
         {% continue %}
       {% endif %}
       <li>
-        <a href="#"><i class="fa fa-folder-open"></i>{{collection.display}}<i class="fa fa-caret-down"></i></a>
+        <a href="#"><i class="fa fa-{{collection.icon}}"></i>&nbsp;{{collection.display}}<i class="fa fa-caret-down"></i></a>
         <ul class="submenu">
           {% assign pages = collection.docs | sort: "circa" %}
           {% for page in pages reversed%}

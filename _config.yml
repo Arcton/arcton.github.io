@@ -13,14 +13,17 @@ url: "http://arcton.nz" # the base hostname & protocol for your site
 collections:
   projects:
     display: "Projects"
+    icon: "folder-open"
     output: true
     menu_order: 10
   competitions:
     display: "Competitions"
+    icon: "trophy"
     output: true
     menu_order: 20
   esports:
     display: "E-Sports"
+    icon: "gamepad"
     output: true
     menu_order: 30
 

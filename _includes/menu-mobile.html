@@ -12,7 +12,7 @@
               {% continue %}
             {% endif %}
             <li class="mobile-menu_layer1">
-              <a href="#"><i class="fa fa-folder-open"></i>{{collection.display}}</a>
+              <a href="#"><i class="fa fa-{{collection.icon}}"></i>&nbsp;{{collection.display}}</a>
               {% if page.collection == collection.label %}
                 <ul class="submenu">
                   {% assign pages = collection.docs | sort: "circa" %}
