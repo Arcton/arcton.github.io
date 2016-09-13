@@ -7,7 +7,7 @@
 
 # Site settings
 title: Arcton
-email: your-email@domain.com
+email: team@arcton.nz
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://arcton.nz" # the base hostname & protocol for your site
 collections:
