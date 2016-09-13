@@ -14,7 +14,7 @@
         <ul class="submenu">
           {% assign pages = collection.docs | sort: "circa" %}
           {% for page in pages reversed%}
-          <li><a href="{{page.url}}">{{page.title}}</a></li>
+          <li><a href="{{page.url}}">{% if page.medium_title %}{{page.medium_title}}{% else %}{{page.title}}{% endif %}</a></li>
           {% endfor %}
         </ul>
       </li>
