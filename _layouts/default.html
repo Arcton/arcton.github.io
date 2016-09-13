@@ -1,111 +1,52 @@
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="http://fonts.googleapis.com/css?family=Raleway:400,600,900" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-	<title>Arcton - {{ page.short_title }}</title>
-</head>
-<body>
-
-<header id="nav_bar">
-{% include menu.html %}
-</header>
-
-<div class="under-header">
-
-</div>
-
-<div class="outer-menu">
-  <input class="checkbox-toggle" type="checkbox">
-  <div class="hamburger">
-    <div></div>
+---
+layout: base
+---
+<div class="page-main">
+  <div class="page-title page-box">
+    <h1>{{ page.title }}</h1>
+    <h2>{{ page.participants }}</h2>
   </div>
-  {% include menu-mobile.html %}
-  <main id="main">
-	<div class="page-main">
-		<div class="page-title page-box">
-			<h1>{{ page.title }}</h1>
-			<h2>{{ page.participants }}</h2>
-		</div>
-		<div class="page-section">
-			<div class="page-content page-box">
-				{{ content }}
-			</div>
-			<div class="page-side">
-				{% if page.projectlinks %}
-				<div class="page-links info-panel page-box">
-					<h3>PROJECT LINKS</h3>
-					{% for link in page.projectlinks %}
-					<a href="{{ link.url }}"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
-					{% endfor %}
-				</div>
-				{% endif %}
-				{% if page.photos %}
-				<div class="photos info-panel page-box">
-					<h3>EVENT PHOTOS</h3>
-					  <div class="photo-container">
-						  {% for pic in page.photos %}
-						  <img class="photo" src="{{ pic.url }}" alt="{{ pic.captain }}">
-						  {% endfor %}
-					`  </div>
-				</div>
-				{% endif %}
-				{% if page.screenshots %}
-				<div class="photos info-panel page-box">
-					<h3>SCREENSHOTS</h3>
-					  <div class="photo-container">
-						  {% for pic in page.screenshots %}
-						  <img class="photo" src="{{ pic.url }}" alt="{{ pic.captain }}">
-						  {% endfor %}
-					`  </div>
-				</div>
-				{% endif %}
-				{% if page.media %}
-				<div class="media info-panel page-box">
-					<h3>IN THE MEDIA</h3>
-					{% for link in page.media %}
-					<a href="{{ link.url }}"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
-					{% endfor %}
-				</div>
-				{% endif %}
-			</div>
-		</div>
-	</div>
-</main>
+  <div class="page-section">
+    <div class="page-content page-box">
+      {{ content }}
+    </div>
+    <div class="page-side">
+      {% if page.projectlinks %}
+      <div class="page-links info-panel page-box">
+        <h3>PROJECT LINKS</h3>
+        {% for link in page.projectlinks %}
+        <a href="{{ link.url }}"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% if page.photos %}
+      <div class="photos info-panel page-box">
+        <h3>EVENT PHOTOS</h3>
+          <div class="photo-container">
+            {% for pic in page.photos %}
+            <img class="photo" src="{{ pic.url }}" alt="{{ pic.captain }}">
+            {% endfor %}
+        `  </div>
+      </div>
+      {% endif %}
+      {% if page.screenshots %}
+      <div class="photos info-panel page-box">
+        <h3>SCREENSHOTS</h3>
+          <div class="photo-container">
+            {% for pic in page.screenshots %}
+            <img class="photo" src="{{ pic.url }}" alt="{{ pic.captain }}">
+            {% endfor %}
+        `  </div>
+      </div>
+      {% endif %}
+      {% if page.media %}
+      <div class="media info-panel page-box">
+        <h3>IN THE MEDIA</h3>
+        {% for link in page.media %}
+        <a href="{{ link.url }}"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
 </div>
-
-<footer>
-<!--
-Portions of this website's source are based on:
-Copyright (c) 2016 - Elton Kamami      - http://codepen.io/eltonkamami/pen/hjBrE
-Copyright (c) 2016 - CAPTAIN ANONYMOUS - http://codepen.io/anon/pen/RrGobL
-Copyright (c) 2016 - Brenden Palmer    - http://codepen.io/brenden/pen/VLjKMQ
-
-Permission is hereby granted, free of charge, to any person 
-obtaining a copy of this software and associated documentation 
-files (the "Software"), to deal in the Software without restriction,
- including without limitation the rights to use, copy, modify, 
-merge, publish, distribute, sublicense, and/or sell copies of 
-the Software, and to permit persons to whom the Software is 
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall 
-be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
-DEALINGS IN THE SOFTWARE.
-
-This license only applies to the portions of this website that have been adapted from the codepens listed above.
--->
-</footer>
-
-</body>
-</html>
