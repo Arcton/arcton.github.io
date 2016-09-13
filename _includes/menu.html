@@ -3,30 +3,21 @@
     <li>
       <a href="#"><i class="fa fa-home"></i> Home</a>
     </li>
-    <li>
-      <a href="#"><i class="fa fa-folder-open"></i> Projects <i class="fa fa-caret-down"></i></a>
+    {% assign collections = site.collections | sort: "menu_order" %}
+    {% for collection in collections %}
+      {% assign menu_order = collection.menu_order | to_integer %}
+      {% if menu_order <= 0 %}
+        {% continue %}
+      {% endif %}
+      <li>
+        <a href="#"><i class="fa fa-folder-open"></i>{{collection.display}}<i class="fa fa-caret-down"></i></a>
         <ul class="submenu">
-        <li><a href="locatio">Locatio</a></li>
-        <li><a href="nautdrafter">NautDrafter</a></li>
-        <li><a href="redpeak">Red Peak-ify</a></li>
-      </ul>  
-    </li>
-    <li>
-      <a href="#"><i class="fa fa-trophy"></i> Competitions <i class="fa fa-caret-down"></i></a>
-       <ul class="submenu">
-        <li><a href="govhack-16">GovHack NZ 2016</a></li>
-        <li><a href="nzcsc-16">NZ Cyber Security Challenge 2016</a></li>
-        <li><a href="govhack-15">GovHack NZ 2015</a></li>
-        <li><a href="nzpc-15">NZ Programming Contest 2015</a></li>
-      </ul>  
-    </li>
-    <li>
-      <a href="#"><i class="fa fa-gamepad"></i> eSports <i class="fa fa-caret-down"></i></a>
-       <ul class="submenu">
-        <li><a href="#0">Counter-Strike: Global Offensive</a></li>
-        <li><a href="#0">Awesomenauts</a></li>
-        <li><a href="#0">Stepmania</a></li>
-      </ul>  
-    </li>
+          {% assign pages = collection.docs | sort: "circa" %}
+          {% for page in pages reversed%}
+          <li><a href="{{page.url}}">{{page.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
   </ul>
 </nav>  
