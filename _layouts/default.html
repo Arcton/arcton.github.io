@@ -16,7 +16,13 @@ layout: base
         <h3 class="page-box__heading">Project Links</h3>
         <div class="project-links">
           {% for link in page.projectlinks %}
-          <a href="{{ link.url }}" class="project-links__link"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
+          <a href="{{ link.url }}" class="project-links__link">
+            {% if link.logo %}
+            <img src="{{ link.logo }}" alt="{{ link.name }}">
+            {% else %}
+            {{ link.name }}
+            {% endif %}
+          </a>
           {% endfor %}
         </div>
       </div>
