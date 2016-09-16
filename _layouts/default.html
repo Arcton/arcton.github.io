@@ -2,46 +2,46 @@
 layout: base
 ---
 <div class="page-main">
-  <div class="page-title page-box">
-    <h1>{{ page.title }}</h1>
-    <h2>{{ page.participants }}</h2>
+  <div class="page-box page-box--title">
+    <h1 class="page-box__heading">{{ page.title }}</h1>
+    <h2 class="page-box__subheading">{{ page.participants }}</h2>
   </div>
-  <div class="page-section">
-    <div class="page-content page-box">
+  <div class="content-wrapper">
+    <div class="content page-box">
       {{ content }}
     </div>
-    <div class="page-side">
+    <div class="sidebar">
       {% if page.projectlinks %}
-      <div class="page-links info-panel page-box">
-        <h3>PROJECT LINKS</h3>
+      <div class="page-box page-box--info">
+        <h3 class="page-box__heading">Project Links</h3>
         {% for link in page.projectlinks %}
         <a href="{{ link.url }}"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
         {% endfor %}
       </div>
       {% endif %}
       {% if page.photos %}
-      <div class="photos info-panel page-box">
-        <h3>EVENT PHOTOS</h3>
+      <div class="page-box page-box--info">
+        <h3 class="page-box__heading">Event Photos</h3>
           <div class="photo-container">
             {% for pic in page.photos %}
             <img class="photo" src="{{ pic.url }}" alt="{{ pic.captain }}">
             {% endfor %}
-        `  </div>
+          </div>
       </div>
       {% endif %}
       {% if page.screenshots %}
-      <div class="photos info-panel page-box">
-        <h3>SCREENSHOTS</h3>
+      <div class="page-box page-box--info">
+        <h3 class="page-box__heading">Screenshots</h3>
           <div class="photo-container">
             {% for pic in page.screenshots %}
             <img class="photo" src="{{ pic.url }}" alt="{{ pic.captain }}">
             {% endfor %}
-        `  </div>
+          </div>
       </div>
       {% endif %}
       {% if page.media %}
-      <div class="media info-panel page-box">
-        <h3>IN THE MEDIA</h3>
+      <div class="page-box page-box--info">
+        <h3 class="page-box__heading">In the Media</h3>
         {% for link in page.media %}
         <a href="{{ link.url }}"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
         {% endfor %}

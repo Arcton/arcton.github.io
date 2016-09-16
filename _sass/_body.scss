@@ -1,0 +1,10 @@
+body {
+  font-family: "Raleway";
+  font-weight: $font-weight-base;
+  color: $col-primary;
+  background: #f0f0f0;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1em;
+}

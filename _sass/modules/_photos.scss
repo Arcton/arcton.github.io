@@ -1,0 +1,44 @@
+// TODO: remove this, swap for a JS implementation
+
+.photo-container {
+  @extend %clearfix;
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.photo {
+  position: absolute;
+  animation: round 32s infinite;
+  opacity: 0;
+  margin: 0 auto;
+  max-width: 100% !important;
+  top: 0;
+  left: 0;
+}
+
+.photo:nth-child(1) {
+  animation-delay: 24s;
+  position: relative;
+}
+
+.photo:nth-child(2) {
+  animation-delay: 16s;
+}
+
+.photo:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.photo:nth-child(4) {
+  animation-delay: 0s;
+}
+
+@keyframes round {
+  25% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}

@@ -1,7 +1,10 @@
-<nav id="nav" class="fd">
-  <ul id="main-menu">
-    <li>
-      <a href="/"><i class="fa fa-home"></i> Home</a>
+<input type="checkbox" id="menuToggle" class="nav__toggle-input">
+<label for="menuToggle" class="nav__toggle-label"></label>
+
+<nav class="nav">
+  <ul class="nav__inner">
+    <li class="nav__item">
+      <a href="/"  class="nav__link"><i class="fa fa-home"></i> Home</a>
     </li>
     {% assign collections = site.collections | sort: "menu_order" %}
     {% for collection in collections %}
@@ -9,15 +12,15 @@
       {% if menu_order <= 0 %}
         {% continue %}
       {% endif %}
-      <li>
-        <a href="#"><i class="fa fa-{{collection.icon}}"></i>&nbsp;{{collection.display}}<i class="fa fa-caret-down"></i></a>
+      <li class="nav__item {% if page.collection == collection.label %}nav__item--active{% endif %}">
+        <a href="#"  class="nav__link"><i class="fa fa-{{collection.icon}}"></i>&nbsp;{{collection.display}}<i class="fa fa-caret-down"></i></a>
         <ul class="submenu">
           {% assign pages = collection.docs | sort: "circa" %}
           {% for page in pages reversed%}
-          <li><a href="{{page.url}}">{% if page.medium_title %}{{page.medium_title}}{% else %}{{page.title}}{% endif %}</a></li>
+          <li class="submenu__item"><a href="{{page.url}}" class="submenu__link">{% if page.medium_title %}{{page.medium_title}}{% else %}{{page.title}}{% endif %}</a></li>
           {% endfor %}
         </ul>
       </li>
     {% endfor %}
   </ul>
-</nav>  
+</nav>

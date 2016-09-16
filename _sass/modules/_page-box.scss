@@ -1,0 +1,41 @@
+.page-box {
+  $el: &;
+
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+
+  &--info {
+    text-align: center;
+
+    #{$el}__heading {
+      font-weight: $font-weight-extabold;
+      text-transform: uppercase;
+      margin-bottom: 1em;
+    }
+
+    img {
+    	max-width: 60%;
+    	max-height: 200px;
+    }
+  }
+
+  &--title {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    #{$el}__heading {
+      font-weight: $font-weight-extabold;
+      font-size: 2em;
+      line-height: 1;
+    }
+
+    #{$el}__subheading {
+      font-size: 1.4em;
+      margin-top: 1em;
+    }
+  }
+}
