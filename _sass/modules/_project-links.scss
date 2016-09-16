@@ -1,0 +1,10 @@
+.project-links {
+  &__link {
+    display: block;
+    margin-bottom: 2em;
+
+    &:last-child {
+      margin-bottom: 1em;
+    }
+  }
+}

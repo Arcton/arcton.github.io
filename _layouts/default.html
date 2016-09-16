@@ -14,9 +14,11 @@ layout: base
       {% if page.projectlinks %}
       <div class="page-box page-box--info">
         <h3 class="page-box__heading">Project Links</h3>
-        {% for link in page.projectlinks %}
-        <a href="{{ link.url }}"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
-        {% endfor %}
+        <div class="project-links">
+          {% for link in page.projectlinks %}
+          <a href="{{ link.url }}" class="project-links__link"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
+          {% endfor %}
+        </div>
       </div>
       {% endif %}
       {% if page.photos %}
@@ -42,9 +44,11 @@ layout: base
       {% if page.media %}
       <div class="page-box page-box--info">
         <h3 class="page-box__heading">In the Media</h3>
-        {% for link in page.media %}
-        <a href="{{ link.url }}"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
-        {% endfor %}
+        <div class="project-links">
+          {% for link in page.media %}
+          <a href="{{ link.url }}" class="project-links__link"><img src="{{ link.logo }}" alt="{{ link.name }}"></a>
+          {% endfor %}
+        </div>
       </div>
       {% endif %}
     </div>
