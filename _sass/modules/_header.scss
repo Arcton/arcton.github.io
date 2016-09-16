@@ -7,4 +7,9 @@
   width: 100%;
   z-index: 999;
   text-align: center;
+
+  @media(max-width: $break-m) {
+    position: static;
+    height: $header-height;
+  }
 }

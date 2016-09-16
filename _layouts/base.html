@@ -8,6 +8,9 @@
     <title>Arcton{% unless page.short_title == null %} - {{ page.short_title }}{% endunless %}</title>
   </head>
   <body>
+    <input type="checkbox" id="menuToggle" class="nav-toggle__input">
+    <label for="menuToggle" class="nav-toggle__label"></label>
+
     <header class="header">
     {% include menu.html %}
     </header>
