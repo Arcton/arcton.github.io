@@ -5,7 +5,7 @@ function createSplash() {
   var ctx = canvas.getContext('2d');
   var imgXCoord = 0;
   var img = new Image();
-  img.src= '/assets/splash-logo.png';
+  img.src= '/assets/404-logo.png';
   img.onload = function() {
     onResize();
     canvas.height = img.height;
