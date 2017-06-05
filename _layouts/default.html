@@ -10,6 +10,7 @@ layout: base
     <div class="content page-box">
       {{ content }}
     </div>
+	{% if page.projectlinks or page.photos or page.screenshots or page.media %}
     <div class="sidebar">
       {% if page.projectlinks %}
       <div class="page-box page-box--info">
@@ -58,5 +59,6 @@ layout: base
       </div>
       {% endif %}
     </div>
+	{% endif %}
   </div>
 </div>
