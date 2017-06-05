@@ -21,11 +21,6 @@ collections:
     icon: "trophy"
     output: true
     menu_order: 20
-  esports:
-    display: "E-Sports"
-    icon: "gamepad"
-    output: true
-    menu_order: 30
 
 # Build settings
 markdown: kramdown
