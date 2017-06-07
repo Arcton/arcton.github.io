@@ -21,8 +21,8 @@ collections:
     icon: "trophy"
     output: true
     menu_order: 20
-  64hace:
-    display: "64H-ACE"
+  ace:
+    display: "ACE"
     icon: "code"
     output: true
     menu_order: 30
