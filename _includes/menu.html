@@ -12,7 +12,7 @@
       <li class="nav__item {% if page.collection == collection.label %}nav__item--active{% endif %}">
         <a href="#"  class="nav__link"><i class="fa fa-{{collection.icon}}"></i>&nbsp;{{collection.display}}<i class="fa fa-caret-down"></i></a>
         <ul class="submenu">
-          {% assign pages = collection.docs | sort: "circa" %}
+          {% assign pages = collection.docs | sort: "order" %}
           {% for page in pages reversed%}
           <li class="submenu__item"><a href="{{page.url}}" class="submenu__link">{% if page.medium_title %}{{page.medium_title}}{% else %}{{page.title}}{% endif %}</a></li>
           {% endfor %}
