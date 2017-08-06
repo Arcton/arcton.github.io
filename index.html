@@ -27,30 +27,21 @@ short_title: Arcton
       <h2 class="heading-secondary">Here's some of the stuff we've been up to</h2>
 
       <div class="features-container">
-        <div class="feature">
-          <img class="feature__image" />
+        {% for collection in site.collections %}
+          {% assign pages = collection.docs | sort: "circa" %}
+          {% for page in pages reversed%}
+            {% if page.featured %}
+              <a href="{{page.url}}" class="feature">
+                <img class="feature__image" src="{{page.main_image}}" />
 
-          <div class="feature__text-content">
-            <span class="feature__subtitle">Lorem</span>
-            <span class="feature__title">Ipsum</span>
-          </div>
-        </div>
-        <div class="feature">
-          <img class="feature__image" />
-
-          <div class="feature__text-content">
-            <span class="feature__subtitle">Lorem</span>
-            <span class="feature__title">Ipsum</span>
-          </div>
-        </div>
-        <div class="feature">
-          <img class="feature__image" />
-
-          <div class="feature__text-content">
-            <span class="feature__subtitle">Lorem</span>
-            <span class="feature__title">Ipsum</span>
-          </div>
-        </div>
+                <div class="feature__text-content">
+                  {% if page.subtitle %}<span class="feature__subtitle">{{page.subtitle}}</span>{% endif %}
+                  <span class="feature__title">{{page.short_title}}</span>
+                </div>
+              </a>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
       </div>
     </div>
 
