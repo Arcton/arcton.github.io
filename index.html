@@ -32,7 +32,8 @@ short_title: Arcton
           {% for page in pages reversed%}
             {% if page.featured %}
               <a href="{{page.url}}" class="feature">
-                <img class="feature__image" src="{{page.main_image}}" />
+                <div class="feature__image" style="background-image: url({{page.main_image}});">
+                </div>
 
                 <div class="feature__text-content">
                   {% if page.subtitle %}<span class="feature__subtitle">{{page.subtitle}}</span>{% endif %}
