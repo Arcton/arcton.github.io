@@ -1,3 +1,4 @@
+$font-weight-light: 300;
 $font-weight-base: 400;
 $font-weight-bold: 600;
 $font-weight-extabold: 800;
@@ -11,5 +12,11 @@ $break-m: 800px;
 $col-primary: #2d3f51;
 $col-secondary: #16A085;
 $col-fg-light: #F5F5F5;
+$col-fg-dark: black;
+
+$col-bg-dark: #25193c;
+$col-bg-darker: darken($col-bg-dark, 10%);
+
+$radius-medium: 5px;
 
 $transition-normal: 0.2s;

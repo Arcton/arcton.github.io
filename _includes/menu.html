@@ -1,23 +1,28 @@
-<nav class="nav">
-  <ul class="nav__inner">
-    <li class="nav__item">
-      <a href="/"  class="nav__link"><i class="fa fa-home"></i> Home</a>
-    </li>
-    {% assign collections = site.collections | sort: "menu_order" %}
-    {% for collection in collections %}
-      {% assign menu_order = collection.menu_order | to_integer %}
-      {% if menu_order <= 0 %}
-        {% continue %}
-      {% endif %}
-      <li class="nav__item {% if page.collection == collection.label %}nav__item--active{% endif %}">
-        <a href="#"  class="nav__link"><i class="fa fa-{{collection.icon}}"></i>&nbsp;{{collection.display}}<i class="fa fa-caret-down"></i></a>
-        <ul class="submenu">
-          {% assign pages = collection.docs | sort: "circa" %}
-          {% for page in pages reversed%}
-          <li class="submenu__item"><a href="{{page.url}}" class="submenu__link">{% if page.medium_title %}{{page.medium_title}}{% else %}{{page.title}}{% endif %}</a></li>
-          {% endfor %}
-        </ul>
+<input type="checkbox" id="menuToggle" class="nav-toggle__input">
+<label for="menuToggle" class="nav-toggle__label"></label>
+
+<header class="header">
+  <nav class="nav">
+    <ul class="nav__inner">
+      <li class="nav__item">
+        <a href="/"  class="nav__link"><i class="fa fa-home"></i> Home</a>
       </li>
-    {% endfor %}
-  </ul>
-</nav>
+      {% assign collections = site.collections | sort: "menu_order" %}
+      {% for collection in collections %}
+        {% assign menu_order = collection.menu_order | to_integer %}
+        {% if menu_order <= 0 %}
+          {% continue %}
+        {% endif %}
+        <li class="nav__item {% if page.collection == collection.label %}nav__item--active{% endif %}">
+          <a href="#"  class="nav__link"><i class="fa fa-{{collection.icon}}"></i>&nbsp;{{collection.display}}<i class="fa fa-caret-down"></i></a>
+          <ul class="submenu">
+            {% assign pages = collection.docs | sort: "circa" %}
+            {% for page in pages reversed%}
+            <li class="submenu__item"><a href="{{page.url}}" class="submenu__link">{% if page.medium_title %}{{page.medium_title}}{% else %}{{page.title}}{% endif %}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

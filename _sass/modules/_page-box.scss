@@ -4,9 +4,10 @@
   margin-bottom: 20px;
   padding: 20px;
   background: #FFF;
-  border-radius: 5px;
+  border-radius: $radius-medium;
   box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
   line-height: 1.6;
+  color: $col-fg-dark;
 
   &--info {
     text-align: center;
@@ -32,5 +33,10 @@
       font-size: 1.4em;
       margin-top: 1em;
     }
+  }
+
+  &--dark {
+    background-color: $col-bg-darker;
+    color: $col-fg-light;
   }
 }
